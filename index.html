@@ -1,62 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página - Módulo I - Primeiros Passos com HTML</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Desafio - Módulo I - Primeiros Passos com HTML</title>
 </head>
 <body>
-    <h1>Módulo 1 - Primeiros Passos com HTML</h1>
+    <h1 id="inicio">Módulo 1 - Primeiros Passos com HTML</h1>
     <hr />
 
     <h2>Índice</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste índice você deve colocar os tópicos que mais entendeu. Estes apenas são sugestões.</p>
     <ul>
-        <li><a href="#">História dos computadores</a></li>
-        <li><a href="#">O que são <i>Clients</i>?</a></li>
-        <li><a href="#">O que são <i>Servers</i>?</a></li>
-        <li><a href="#">Como é uma estrutura básica de um HTML?</a></li>
-        <li><a href="#">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
-        <li><a href="#">Links de referências</a></li>
+        <li><a href="#historia">A fascinante história da Web</a></li>
+        <li><a href="#clients">O que são <i>Clients</i>?</a></li>
+        <li><a href="#servers">O que são <i>Servers</i>?</a></li>
+        <li><a href="#estrutura">Estrutura básica de um documento HTML</a></li>
+        <li><a href="#listas">Listas Ordenadas e Não Ordenadas</a></li>
+        <li><a href="#referencias">Links de Referências</a></li>
     </ul>
 
-    <h2>História dos computadores</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2 id="historia">A fascinante história da Web</h2>
+    <p>
+        A história da computação é uma jornada incrível, desde máquinas gigantescas que ocupavam salas inteiras até os dispositivos que carregamos no bolso. Tudo começou com o <strong>ENIAC</strong> em 1945, considerado o primeiro computador eletrônico de grande escala. A evolução foi rápida, passando pelos mainframes, minicomputadores e, finalmente, pelos computadores pessoais (PCs) que popularizaram a tecnologia.
+    </p>
+    <p>
+        Paralelamente, a internet surgia como um projeto militar chamado <u>ARPANET</u>. A grande virada para nós, desenvolvedores, foi a criação da World Wide Web (<abbr title="World Wide Web">WWW</abbr>) por Tim Berners-Lee em 1989. Ele desenvolveu o <abbr title="HyperText Markup Language">HTML</abbr>, o <abbr title="HyperText Transfer Protocol">HTTP</abbr> e o primeiro navegador. Isso <mark>transformou a internet de uma rede de acadêmicos para a plataforma global que conhecemos hoje</mark>.
+    </p>
+    <blockquote>
+        "A Web como eu a concebi, não a desenvolvemos para ser uma coisa para se olhar, mas um meio para se trabalhar em conjunto." - Tim Berners-Lee
+    </blockquote>
+    <small><a href="#inicio">Voltar ao topo</a></small>
 
-    <h2>O que são <i>Clients</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2 id="clients">O que são <i>Clients</i>?</h2>
+    <p>
+        No contexto da web, um <strong>cliente (client)</strong> é o lado do usuário na equação. É o software ou dispositivo que faz uma <u>requisição</u> de informações a um servidor. O exemplo mais comum é o seu <i>navegador de internet</i> (como Chrome, Firefox, Safari). Quando você digita um endereço e pressiona Enter, seu navegador (o cliente) envia um pedido para o servidor daquele site.
+    </p>
+    <p>
+        Outros exemplos de clientes incluem aplicativos de celular, clientes de e-mail (como o Outlook) e até mesmo outros sistemas que consomem <abbr title="Application Programming Interface">APIs</abbr>. A função principal do cliente é <mark>iniciar a comunicação e exibir a resposta</mark> recebida do servidor de forma compreensível para o usuário.
+    </p>
+    <small><a href="#inicio">Voltar ao topo</a></small>
 
-    <h2>O que são <i>Servers</i>?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2 id="servers">O que são <i>Servers</i>?</h2>
+    <p>
+        Se o cliente pede, o <strong>servidor (server)</strong> é quem <u>atende</u>. Um servidor é um computador (ou um sistema de computadores) robusto, sempre conectado à internet, cuja função é <strong>armazenar, processar e entregar</strong> os dados solicitados pelos clientes. 
+    </p>
+    <p>
+        Quando o servidor do site da DIO recebe uma requisição do seu navegador, ele localiza os arquivos <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> e JavaScript, processa qualquer lógica necessária (como verificar se você está logado) e envia tudo de volta para o seu navegador montar a página. O conceito de servidor era <del>apenas para computadores enormes</del>, mas hoje qualquer computador pode atuar como um servidor, embora para sites de grande tráfego sejam usadas máquinas especializadas.
+    </p>
+    <small><a href="#inicio">Voltar ao topo</a></small>
 
-    <h2>Como é uma estrutura básica de um HTML?</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2 id="estrutura">Estrutura básica de um documento HTML</h2>
+    <p>
+        Todo documento <abbr title="HyperText Markup Language">HTML</abbr> segue uma estrutura padrão, que informa ao navegador como interpretar e renderizar o conteúdo. É como o esqueleto da página.
+    </p>
+    <h3>Tags Essenciais</h3>
+    <p>
+        A estrutura fundamental é composta por: <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> e <code>&lt;body&gt;</code>.
+        <ul>
+            <li><code>&lt;!DOCTYPE html&gt;</code>: Define a versão do HTML (neste caso, HTML5).</li>
+            <li><code>&lt;html&gt;</code>: A raiz de todo o documento.</li>
+            <li><code>&lt;head&gt;</code>: Contém metadados, título da página, links para CSS e scripts. Não é visível no corpo da página.</li>
+            <li><code>&lt;body&gt;</code>: Onde todo o conteúdo visível (textos, imagens, links) é colocado.</li>
+        </ul>
+    </p>
+    <p>
+        Antigamente, para definir uma cor de texto, usava-se uma tag como a tag font. Por exemplo: <font color="blue">este texto ficaria azul</font>. <i><!-- Nota: A tag <font> é obsoleta e não deve ser usada. Hoje, usamos CSS para estilização! --></i>
+    </p>
+    <small><a href="#inicio">Voltar ao topo</a></small>
 
-    <h2>Entendendo a diferença entre listas ordenadas e não ordenadas</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Neste trecho, coloque com suas palavras o que entendeu sobre o assunto. 
-       Não esqueça de colocar links para outros sites e também de formatar o texto com 
-       <strong>negrito</strong>, <i>itálico</i> e <u>sublinhado</u> quando necessário.</p>
-    <p>Não esqueça também de colocar o link para voltar até o índice. (Lembra das âncoras?)</p>
+    <h2 id="listas">Listas Ordenadas e Não Ordenadas</h2>
+    <p>
+        Listas são fundamentais para organizar informações em <abbr title="HyperText Markup Language">HTML</abbr>. Existem dois tipos principais, e a escolha depende se a <u>ordem dos itens importa ou não</u>.
+    </p>
 
-    <h2>Links de referências</h2>
-    <p><strong><u>INSTRUÇÕES:</u> </strong>Coloque links para outras páginas que falam sobre estes assuntos. Não esquece de que precisa abrir em outra aba/janela do navegador.</p>
+    <h4>Exemplo de Lista Não Ordenada (<code>&lt;ul&gt;</code>)</h4>
+    <p>Usada quando a sequência dos itens não é relevante. Pense em uma lista de compras.</p>
     <ul>
-        <li><a href="#">http://dio.me</a></li>
-        <li><a href="#">http://w3c.org</a></li>
+        <li>Café</li>
+        <li>Açúcar</li>
+        <li>Leite (Composição: H<sub>2</sub>O + outros componentes)</li>
     </ul>
+    
+    <h5>Exemplo de Lista Ordenada (<code>&lt;ol&gt;</code>)</h5>
+    <p>Usada quando a sequência é crucial, como em um passo a passo de uma receita ou um ranking.</p>
+    <ol>
+        <li>Ferver a água (a 100<sup>o</sup>C em condições normais).</li>
+        <li>Adicionar o pó de café.</li>
+        <li>Coar.</li>
+    </ol>
+    <h6>Observação:</h6>
+    <p>Dentro de cada lista (<code>&lt;ul&gt;</code> ou <code>&lt;ol&gt;</code>), cada item é definido pela tag <code>&lt;li&gt;</code> (list item).</p>
+    <small><a href="#inicio">Voltar ao topo</a></small>
 
+    <h2 id="referencias">Links de Referências</h2>
+    <p>Abaixo estão alguns links úteis para aprofundar seus conhecimentos em desenvolvimento web. Eles abrirão em uma nova aba.</p>
+    <ul>
+        <li><a href="https://www.dio.me" target="_blank">Site Oficial da DIO.me</a></li>
+        <li><a href="https://www.w3.org/" target="_blank">W3C - World Wide Web Consortium</a></li>
+        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN Web Docs - HTML</a></li>
+    </ul>
 </body>
 </html>
